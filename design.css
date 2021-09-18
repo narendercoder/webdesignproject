@@ -1,0 +1,711 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*css variables*/
+:root {
+  --navbar-height: 60px;
+}
+body {
+  font-family: montserrat;
+}
+#main-header-wrapper {
+  background-image: url("https://kriyawp.wpengine.com/wp-content/themes/kriya/images/pattern-chakras-white.png");
+  width: 100%;
+  height: 96px;
+}
+nav {
+  overflow: hidden;
+  top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #7e8446;
+  height: 96px;
+  width: 100%;
+}
+label.logo {
+  /* border: 1px solid black; */
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active {
+  color: rgb(255, 183, 0);
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 183, 0);
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (min-width: 1100px) and (max-width: 1600) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1100px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.9);
+    top: 0px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav ul li a:hover,
+  a.active {
+    color: rgb(255, 183, 0);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+/* 
+#quotes {
+  position: absolute;
+  top: 96px;
+  overflow: hidden;
+  width: 100%;
+  height: 700px;
+}
+#quotes div {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  z-index: 2;
+  animation: 10s slider infinite;
+}
+
+#quotes div div {
+  color: black;
+  width: 100%;
+} */
+
+#image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 700px;
+  z-index: -1;
+}
+
+#image div {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* height: 700px; */
+  margin: 0;
+  left: 0;
+  animation: 10s slider infinite;
+}
+#image div img {
+  width: 100%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+}
+#arrow_bg2 {
+  /* border: 1px solid black; */
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.2);
+  top: 50%;
+  right: 50px;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+}
+#arrow_bg2:hover {
+  background: black;
+}
+#arrow_bg2 #right {
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  border-left: 0.2rem solid white;
+  border-bottom: 0.2em solid white;
+  width: 1em;
+  height: 1em;
+  transform: rotate(225deg);
+}
+#arrow_bg1 {
+  /* border: 1px solid black; */
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50px;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+}
+#arrow_bg1:hover {
+  background: black;
+}
+#arrow_bg1 #left {
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  border-left: 0.2rem solid white;
+  border-bottom: 0.2rem solid white;
+  width: 1em;
+  height: 1em;
+  transform: rotate(45deg);
+}
+
+#main {
+  margin: 0 0;
+  position: relative;
+  z-index: 1;
+  background-image: url("https://kriyawp.wpengine.com/wp-content/uploads/2016/04/pattern-chakras-alt-color.jpg?id=5252");
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+#mc_wrapper {
+  background: transparent;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#description {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 35px; */
+}
+#description h2 {
+  margin: 24.9px 0 0;
+  color: rgb(72, 67, 56);
+  font-weight: bold;
+}
+#design {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  height: 70px;
+  width: 100%;
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+#design p {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 16px 0 0;
+}
+#types {
+  position: relative;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+#types .box {
+  padding: 18px;
+  margin: 1vw 3vw;
+  border-radius: 23px;
+  text-transform: uppercase;
+}
+#types img {
+  border-radius: 50%;
+  padding: 5px;
+  width: 150px;
+  transition: transform 0.2s;
+}
+#box1 img {
+  border-radius: 50%;
+  background: #f26d7d;
+}
+#box2 img {
+  border-radius: 50%;
+  background: #f6d878;
+}
+#box3 img {
+  border-radius: 50%;
+  background: #9bd9da;
+}
+#box4 img {
+  border-radius: 50%;
+  background: #e09866;
+}
+#types img:hover {
+  transform: scale(1.2);
+}
+
+#panel_heading {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.12em;
+  color: #484338;
+}
+#panel_body {
+  position: relative;
+  background-color: #f2e9d2;
+  padding-bottom: 100px;
+}
+#container {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#con_1 {
+  padding-top: 10px;
+}
+#con_2 {
+  padding-top: 10px;
+}
+#con_3 {
+  padding-top: 10px;
+}
+#col {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.header {
+  padding: 30px 25px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.header h5 {
+  font-family: PT Serif;
+  font-weight: bold;
+  line-height: 28px;
+  color: #484338;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.price {
+  border-top: 1px dashed;
+  border-color: #a58251;
+  margin: 25px 0 0;
+  padding: 35px 0 0;
+}
+
+.price h6 sup {
+  position: relative;
+  font-size: 18px;
+  left: 0px;
+  top: -20px;
+}
+
+.price h6 sub {
+  font-size: 18px;
+  margin: 0 0 0 0px;
+  position: relative;
+  bottom: 0;
+}
+
+.header h6 {
+  font-family: PT Serif;
+  font-weight: bold;
+  line-height: 24px;
+  color: #484338;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+#col_1 {
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#col_2 {
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#col_3 {
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#container #span1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f26d7d;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: -1;
+}
+#container #header1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f26d7d;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+#container  #header1:hover::before {
+  height: 100%;
+}
+
+#container #span2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #9bd9da;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: -1;
+}
+#border{
+  box-sizing: border-box;
+  z-index: 1;
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 10px;
+  position: relative;
+  width: auto
+
+}
+#border::before{
+  border: 1px solid;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.75s ease 0s
+}
+#border::after{
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  top: 20px
+}
+#container #header2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #9bd9da;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+#container #header2:hover::before{
+  border-top: white;
+  height: 100%;
+}
+
+#container #span3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #e09866;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: -1;
+}
+#container #header3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #e09866;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+#container #header3:hover::before {
+  height: 100%;
+}
+
+#container ul {
+  left: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 0 25px 20px;
+  background-color: transparent;
+  height: fit-content;
+}
+#container ul li {
+  width: 100%;
+  border-color: rgba(165, 130, 81, 0.5);
+  border-bottom: 1px dashed;
+  color: #484338;
+  font-weight: normal;
+  padding: 10px 0;
+  line-height: 28px;
+}
+.buy_now {
+  padding: 0 25px 30px;
+}
+.buy_now a {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #a58251;
+  padding: 10px 50px 10px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #a58251;
+}
+.buy_now a::after {
+  content: "\f30b";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  color: #a58251;
+  height: 45px;
+  line-height: 45px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.buy_now a:hover::after {
+  content: "\f30b";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  color: white;
+  height: 45px;
+  line-height: 45px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.buy_now :hover {
+  border: 0px;
+  background-color: #a58251;
+  color: white;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  background: #d4ad76;
+}
+
+#footer_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+#contact_form{
+  align-items: center;
+  color: #484349;
+}
+#contact-box label{
+  padding: 10px;
+}
+#about_main{
+  
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#about div{
+  text-align: center;
+  padding: 0px 25px 0px 2px;
+}
+#about ul{
+  
+  position: relative;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  background-color: transparent;
+  height: fit-content;
+}
+#about ul li{
+  width: 100%;
+  border-color: rgba(165, 130, 81, 0.5);
+  border-bottom: 1px dashed;
+  color: #484338;
+  font-weight: normal;
+  padding: 10px 0;
+  line-height: 28px;
+  padding: 15px 20px 15px 20px;
+}
+#about ul li a{
+  color: #484349;
+  text-decoration: none;
+}
+#social_media{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#social_media div{
+  position: relative;
+  
+}
+#social_media div div{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline;
+  filter: grayscale(100%);
+}
+#social_media div div:hover{
+  filter: grayscale(0%);
+}
+#copyright{
+position: relative;
+text-align: center;
+background-color: #54452f;
+color: #d4ad76;
+padding: 10px 0px 10px 0px;
+}
+
+#contact_info strong::before{
+  content: "\f879";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  color: #ffffff;
+  line-height: 40px;
+  padding-left: 5px;
+  width: 25px;
+  height: 40px;
+  
+}
+#contact_info{
+  width: 100%;
+  border-bottom: 1px dashed;
+  border-color: rgba(165, 130, 81,);
+  padding: 3.5px 20px 15px 20px;
+}
+
+#mail::before{
+  content: "\f0e0";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  color: #ffffff;
+  line-height: 40px;
+  padding-left: 5px;
+  width: 30px;
+  height: 20px;
+  
+}
+#mail{
+  padding: 3.5px 20px 15px 20px;
+}
+
